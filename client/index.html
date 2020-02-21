@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <input placeholder="Message" id="msg">
+    <input placeholder="Room" id="room">
+    <button onclick="send()">Send</button>
+    <script>
+        const socket = io();
+        socket.emit('subscribe', 'room-CTSH', data=>console.log("initial stock", data));
+        socket.emit('subscribe', 'room-BPCL.NS', data=>console.log("initial stock", data));
+
+        socket.emit('init',{data:'from client'}, (data)=>{
+            console.log(data);
+        });
+        socket.on('message',(data)=>{
+            console.log(data);
+        })
+        function send(){
+            socket.emit('send', { 
+                room: document.getElementById('room').value, 
+                message: document.getElementById('msg').value 
+            });
+            // socket.emit('message',document.getElementById('msg').value);
+        }
+    </script>
+</body>
+</html>
+

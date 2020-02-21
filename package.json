@@ -1,0 +1,23 @@
+{
+  "name": "tensorflow-native",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tensorflow/tfjs-node": "^1.2.7",
+    "@tensorflow/tfjs-node-gpu": "^1.2.7",
+    "cron": "^1.8.2",
+    "csvtojson": "^2.0.10",
+    "express": "^4.17.1",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.27",
+    "nodeplotlib": "^0.6.4",
+    "socket.io": "^2.3.0"
+  }
+}
