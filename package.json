@@ -13,7 +13,7 @@
     "@tensorflow/tfjs-node-gpu": "^1.2.7",
     "cron": "^1.8.2",
     "csvtojson": "^2.0.10",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
     "moment-timezone": "^0.5.27",
